@@ -4,15 +4,20 @@
 	</head>
 	<body>
 
-		<% 
+		<%!
+
+		public string helloWorld(){
 			String msg = "Hello World";
 			String user = request.getParameter("user");
 			if(user.length()!= 0){
 				msg = "Hello " + user;
 			}
-			out.println(msg);
+			return msg;
+		}
 
 		%>
+
+		<%= helloWorld(); %>
 
 	</body>
 </html>
