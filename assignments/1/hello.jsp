@@ -6,10 +6,10 @@
 
 		<%!
 
-		public string helloWorld(){
+		public String helloWorld(HttpServletRequest request){
 			String msg = "Hello World";
 			String user = request.getParameter("user");
-			if(user.length()!= 0){
+			if(user != null && !user.isEmpty()){
 				msg = "Hello " + user;
 			}
 			return msg;
@@ -17,7 +17,7 @@
 
 		%>
 
-		<%= helloWorld(); %>
+		<%= helloWorld(request) %>
 
 	</body>
 </html>
