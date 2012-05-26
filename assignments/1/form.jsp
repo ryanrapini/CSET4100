@@ -4,14 +4,14 @@
 	</head>
 	<body>
 
-		<table border="1px solid black">
+		<table>
 			<tr>
 				<td>Username:</td>
-				<td></td>
+				<td><%= request.getParameter("name") %></td>
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td></td>
+				<td><%= request.getParameter("pass") %></td>
 			</tr>
 		</table> 
 
